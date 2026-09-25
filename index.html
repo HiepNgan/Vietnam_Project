@@ -1,0 +1,884 @@
+
+<!DOCTYPE html>
+<ht
+ml lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Discover Ho Chi Minh City through attractions, food, culture, and travel experiences."
+    >
+
+    <title>Discover Ho Chi Minh City | Interactive City Guide</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header id="home">
+
+        <div class="container">
+
+            <h1>Discover Ho Chi Minh City</h1>
+
+            <p>
+                Explore the culture, food, history, and energy of Vietnam's largest city.
+            </p>
+
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#attractions">Attractions</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#build-saigon">Build Your Saigon</a></li>
+                    <li><a href="#food">Food</a></li>
+                    <li><a href="#location">Location</a></li>
+                </ul>
+
+
+                <button id="darkModeButton" class="dark-mode-btn">
+                    🌙
+                </button>
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section id="about">
+
+        <div class="container">
+
+            <article>
+
+                <h2>About Ho Chi Minh City</h2>
+
+                <p>
+                    Ho Chi Minh City is a vibrant metropolis in southern Vietnam,
+                    known for its rich history, diverse culture, delicious food,
+                    modern architecture, and energetic streets.
+                </p>
+
+                <p>
+                    From historic landmarks and traditional markets to modern
+                    skyscrapers and lively nightlife, the city offers a wide
+                    variety of experiences for visitors.
+                </p>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ATTRACTIONS ================= -->
+
+    <section id="attractions">
+
+        <div class="container">
+
+            <h2>Famous Attractions</h2>
+
+            <!-- Search -->
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="attractionSearch"
+                    placeholder="Search attractions..."
+                    aria-label="Search attractions"
+                >
+
+                <select id="categoryFilter" aria-label="Filter attractions">
+
+                    <option value="all">All Categories</option>
+                    <option value="history">History</option>
+                    <option value="culture">Culture</option>
+                    <option value="modern">Modern</option>
+                    <option value="shopping">Shopping</option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Attraction Cards -->
+
+            <div class="attraction-grid">
+
+                <article
+                    class="attraction-card"
+                    data-category="shopping"
+                >
+
+                    <img
+                        src="assets/img/benthanh.jpg"
+                        alt="Ben Thanh Market"
+                    >
+
+                    <div class="card-content">
+
+                        <h3>Ben Thanh Market</h3>
+
+                        <p>
+                            One of the city's most recognizable markets,
+                            offering local food, souvenirs, clothing, and
+                            traditional products.
+                        </p>
+
+                        <button class="favorite-btn">
+                            ♡ Add to Favorites
+                        </button>
+
+                    </div>
+
+                </article>
+
+                <article
+                    class="attraction-card"
+                    data-category="history"
+                >
+                
+                    <img
+                        src="assets/img/war-remnants.jpg"
+                        alt="War Remnants Museum"
+                    >
+
+                    <div class="card-content">
+
+                        <h3>War Remnants Museum</h3>
+
+                        <p>
+                            A museum that provides insight into the Vietnam
+                            War and its impact on the country and its people.
+                        </p>
+
+                        <button class="favorite-btn">
+                            ♡ Add to Favorites
+                        </button>
+
+                    </div>
+                </article>
+
+
+                <article
+                    class="attraction-card"
+                    data-category="history"
+                >
+
+                    <img
+                        src="assets/img/independence-palace.jpg"
+                        alt="Independence Palace"
+                    >
+
+                    <div class="card-content">
+
+                        <h3>Independence Palace</h3>
+
+                        <p>
+                            A historic landmark that played an important
+                            role in Vietnam's modern history.
+                        </p>
+
+                        <button class="favorite-btn">
+                            ♡ Add to Favorites
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <article
+                    class="attraction-card"
+                    data-category="culture"
+                >
+
+                    <img
+                        src="assets/img/notre-dame.jpg"
+                        alt="Notre Dame Cathedral of Saigon"
+                    >
+
+                    <div class="card-content">
+
+                        <h3>Notre-Dame Cathedral</h3>
+
+                        <p>
+                            A famous architectural landmark located in
+                            the heart of District 1.
+                        </p>
+
+                        <button class="favorite-btn">
+                            ♡ Add to Favorites
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <article
+                    class="attraction-card"
+                    data-category="culture"
+                >
+
+                    <img
+                        src="assets/img/nguyen-hue.jpg"
+                        alt="Nguyen Hue Walking Street"
+                    >
+
+                    <div class="card-content">
+
+                        <h3>Nguyen Hue Walking Street</h3>
+
+                        <p>
+                            A popular pedestrian area surrounded by
+                            restaurants, cafes, shops, and city landmarks.
+                        </p>
+
+                        <button class="favorite-btn">
+                            ♡ Add to Favorites
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <article
+                    class="attraction-card"
+                    data-category="modern"
+                >
+
+                    <img
+                        src="assets/img/landmark81.jpg"
+                        alt="Landmark 81"
+                    >
+
+                    <div class="card-content">
+
+                        <h3>Landmark 81</h3>
+
+                        <p>
+                            One of Vietnam's most recognizable modern
+                            skyscrapers, offering restaurants, shopping,
+                            entertainment, and city views.
+                        </p>
+
+                        <button class="favorite-btn">
+                            ♡ Add to Favorites
+                        </button>
+
+                    </div>
+
+                </article>
+
+                <article
+                    class="attraction-card"
+                    data-category="modern"  
+                >
+
+                    <img
+                        src="assets/img/68-bitexco.jpg"
+                        alt="68 Bitexco Financial Tower"
+                    >
+
+                    <div class="card-content">
+
+                        <h3>68 Bitexco Financial Tower</h3>
+
+                        <p>
+                            Bitexco Financial Tower is one of Ho Chi Minh City's most iconic landmarks, 
+                            offering stunning city views and a symbol of Saigon's modern skyline.
+                        </p>
+
+                        <button class="favorite-btn">
+                            ♡ Add to Favorites
+                        </button>
+
+                    </div>
+                </article>
+
+                <article
+                    class="attraction-card"
+                    data-category="culture"
+>
+
+                    <img
+                        src="assets/img/bui-vien.jpg"
+                        alt="Bui Vien Walking Street"
+    >
+
+                    <div class="card-content">
+
+                        <h3>Bui Vien Walking Street</h3>
+
+                        <p>
+                            A lively street in District 1 known for its
+                            restaurants, cafes, street food, nightlife,
+                            and energetic atmosphere.
+                        </p>
+
+                        <button class="favorite-btn">
+                        ♡ Add to Favorites
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <p id="noResults" class="hidden">
+                No attractions found.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= GALLERY ================= -->
+
+    <section id="gallery">
+
+        <div class="container">
+
+            <h2>City Gallery</h2>
+
+            <div class="gallery-grid">
+
+                <figure>
+                    <img
+                        src="assets/img/hcmc-food.png"
+                        alt="Vietnamese food in Ho Chi Minh City"
+                    >
+                    <figcaption>Local Vietnamese Food</figcaption>
+                </figure>
+
+                <figure>
+                    <img
+                        src="assets/img/hcmc-night.jpg"
+                        alt="Ho Chi Minh City at night"
+                    >
+                    <figcaption>Ho Chi Minh City at Night</figcaption>
+                </figure>
+
+                <figure>
+                    <img
+                        src="assets/img/nguyen-hue1.jpg"
+                        alt="Nguyen Hue Walking Street"
+                    >
+                    <figcaption>Nguyen Hue Walking Street</figcaption>
+                </figure>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+<!-- ==============================
+     BUILD YOUR SAIGON
+================================= -->
+
+<section id="build-saigon">
+
+    <div class="container">
+
+        <h2>Build Your Saigon</h2>
+
+        <p class="section-intro">
+            Saigon is different for everyone.
+            Choose your vibe, budget and time —
+            we'll create an experience for you.
+        </p>
+
+        <!-- VIBE -->
+
+        <div class="vibe-grid">
+
+            <button class="vibe-card" data-vibe="night">
+                <span class="vibe-icon">🌃</span>
+                <strong>Night Owl</strong>
+                <small>Experience Saigon after dark.</small>
+            </button>
+
+            <button class="vibe-card" data-vibe="foodie">
+                <span class="vibe-icon">🍜</span>
+                <strong>Food Hunter</strong>
+                <small>Discover the flavors of Saigon.</small>
+            </button>
+
+            <button class="vibe-card" data-vibe="photo">
+                <span class="vibe-icon">📸</span>
+                <strong>Photo Explorer</strong>
+                <small>Find the city's best photo spots.</small>
+            </button>
+
+            <button class="vibe-card" data-vibe="history">
+                <span class="vibe-icon">🏛️</span>
+                <strong>History Seeker</strong>
+                <small>Walk through Saigon's history.</small>
+            </button>
+
+            <button class="vibe-card" data-vibe="slow">
+                <span class="vibe-icon">☕</span>
+                <strong>Slow Morning</strong>
+                <small>Enjoy coffee, streets and a slower pace.</small>
+            </button>
+
+        </div>
+
+
+        <!-- BUDGET -->
+
+        <div class="choice-section">
+
+            <h3>What's your budget?</h3>
+
+            <div class="choice-buttons">
+
+                <button class="budget-option" data-budget="Under $20">
+                    Under $20
+                </button>
+
+                <button class="budget-option" data-budget="$20-$50">
+                    $20-$50
+                </button>
+
+                <button class="budget-option" data-budget="Over $50">
+                    Over $50
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- TIME -->
+
+        <div class="choice-section">
+
+            <h3>How much time do you have?</h3>
+
+            <div class="choice-buttons">
+
+                <button class="time-option" data-time="120">
+                    2 Hours
+                </button>
+
+                <button class="time-option" data-time="240">
+                    Half Day
+                </button>
+
+                <button class="time-option" data-time="480">
+                    Full Day
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- ACTIONS -->
+
+        <div class="build-actions">
+
+            <button id="generateItinerary" class="build-button">
+                Build My Saigon →
+            </button>
+
+            <button id="surpriseMe" class="surprise-button">
+                🎲 Surprise Me
+            </button>
+
+        </div>
+
+
+        <!-- RESULT -->
+
+        <div id="saigon-result" class="saigon-story hidden">
+
+            <div class="story-header">
+
+                <div class="result-icon" id="resultIcon">
+                    🌃
+                </div>
+
+                <div>
+
+                    <p class="result-label">
+                        YOUR SAIGON STORY
+                    </p>
+
+                    <h3 id="resultTitle">
+                        The Night Seeker
+                    </h3>
+
+                    <p id="resultDescription">
+                        Your personalized Saigon experience.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- ROUTE -->
+
+            <div id="resultPlaces" class="story-route">
+            </div>
+
+
+            <!-- SCORE -->
+
+            <div class="saigon-score">
+
+                <h4>Your Saigon Score</h4>
+
+                <div class="score-item">
+                    <span>🌃 Nightlife</span>
+                    <div class="score-bar">
+                        <span id="nightScore"></span>
+                    </div>
+                </div>
+
+                <div class="score-item">
+                    <span>🍜 Food</span>
+                    <div class="score-bar">
+                        <span id="foodScore"></span>
+                    </div>
+                </div>
+
+                <div class="score-item">
+                    <span>📸 Photography</span>
+                    <div class="score-bar">
+                        <span id="photoScore"></span>
+                    </div>
+                </div>
+
+                <div class="score-item">
+                    <span>🏛️ History</span>
+                    <div class="score-bar">
+                        <span id="historyScore"></span>
+                    </div>
+                </div>
+
+                <div class="score-item">
+                    <span>☕ Relaxation</span>
+                    <div class="score-bar">
+                        <span id="slowScore"></span>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- BOTTOM -->
+
+            <div class="story-footer">
+
+                <span id="resultBudget">
+                    💰 $$
+                </span>
+
+                <span id="resultTime">
+                    ⏱ Half Day
+                </span>
+
+                <button id="resetExperience">
+                    ↻ Change Experience
+                </button>
+
+            </div>
+
+        </div>
+
+        <div id="email-itinerary">
+
+            <h3>📧 Save Your Saigon</h3>
+
+            <p>
+                Get your personalized itinerary sent to your email.
+            </p>
+
+            <input
+                type="email"
+                id="customerEmail"
+                placeholder="Enter your email"
+            >
+
+            <button id="sendItinerary">
+                Send My Itinerary →
+            </button>
+
+            <p id="emailMessage"></p>
+
+        </div>
+    </div>
+
+</section>
+    <!-- ================= FOOD ================= -->
+
+<section id="food">
+
+    <div class="container">
+
+        <h2>Must-Try Vietnamese Food</h2>
+
+        <!-- Search & Filter -->
+
+        <div class="food-search-box">
+
+            <input
+                type="text"
+                id="foodSearch"
+                placeholder="Search food..."
+                aria-label="Search food"
+            >
+
+            <select id="foodCategoryFilter" aria-label="Filter food">
+
+                <option value="all">All Categories</option>
+                <option value="vietnamese">Vietnamese</option>
+                <option value="street-food">Street Food</option>
+                <option value="dessert">Dessert</option>
+                <option value="drinks">Drinks</option>
+
+            </select>
+
+        </div>
+
+
+        <!-- Food Cards -->
+
+        <div class="food-grid">
+
+            <article
+                class="food-card"
+                data-category="vietnamese"
+            >
+
+                <img
+                    src="assets/img/pho.jpg"
+                    alt="Vietnamese Pho"
+                >
+
+                <div class="food-content">
+
+                    <h3>Phở</h3>
+
+                    <p>
+                        A Vietnamese noodle soup made with
+                        broth, rice noodles, herbs, and meat.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article
+                class="food-card"
+                data-category="street-food"
+            >
+
+                <img
+                    src="assets/img/banh-mi.jpg"
+                    alt="Vietnamese Banh Mi"
+                >
+
+                <div class="food-content">
+
+                    <h3>Bánh Mì</h3>
+
+                    <p>
+                        A crispy Vietnamese sandwich filled with
+                        meat, vegetables, herbs, and sauces.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article
+                class="food-card"
+                data-category="vietnamese"
+            >
+
+                <img
+                    src="assets/img/com-tam.jpg"
+                    alt="Vietnamese Com Tam"
+                >
+
+                <div class="food-content">
+
+                    <h3>Cơm Tấm</h3>
+
+                    <p>
+                        A popular Southern Vietnamese dish made
+                        with broken rice, grilled pork, vegetables,
+                        and fish sauce.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article
+                class="food-card"
+                data-category="street-food"
+            >
+
+                <img
+                    src="assets/img/banh-xeo.jpg"
+                    alt="Vietnamese Banh Xeo"
+                >
+
+                <div class="food-content">
+
+                    <h3>Bánh Xèo</h3>
+
+                    <p>
+                        A crispy Vietnamese savory pancake filled
+                        with shrimp, pork, bean sprouts, and herbs.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article
+                class="food-card"
+                data-category="dessert"
+            >
+
+                <img
+                    src="assets/img/che.jpg"
+                    alt="Vietnamese Che dessert"
+                >
+
+                <div class="food-content">
+
+                    <h3>Chè</h3>
+
+                    <p>
+                        A traditional Vietnamese dessert that comes
+                        in many varieties with beans, fruit, jelly,
+                        and coconut milk.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article
+                class="food-card"
+                data-category="drinks"
+            >
+
+                <img
+                    src="assets/img/coffee.jpg"
+                    alt="Vietnamese iced coffee"
+                >
+
+                <div class="food-content">
+
+                    <h3>Vietnamese Iced Coffee</h3>
+
+                    <p>
+                        Strong Vietnamese coffee combined with
+                        sweetened condensed milk and ice.
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <p id="noFoodResults" class="hidden">
+            No food found.
+        </p>
+
+    </div>
+
+</section>
+
+
+    <!-- ================= LOCATION ================= -->
+
+    <section id="location">
+
+        <div class="container">
+
+            <h2>Location</h2>
+
+            <address>
+                Ho Chi Minh City<br>
+                Vietnam
+            </address>
+
+            <p>
+                Explore the city and discover its unique combination of
+                history, culture, food, and modern life.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="container">
+
+            <p>
+                &copy; 2026 Discover Ho Chi Minh City
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script>
+        emailjs.init({
+            publicKey: "BnObOYZGgvS2LTwgv"
+        });
+    </script>
+
+
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+

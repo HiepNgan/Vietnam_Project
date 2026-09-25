@@ -1,0 +1,1652 @@
+/* ==============================
+   CSS RESET
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ==============================
+   BODY
+================================= */
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+}
+
+
+/* ==============================
+   CONTAINER
+================================= */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+
+/* ==============================
+   HEADER
+================================= */
+
+header {
+    min-height: 500px;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.4)
+        ),
+        url("assets/img/citypicture.png");
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+header p {
+    font-size: 1.2rem;
+}
+
+
+/* ==============================
+   NAVIGATION
+================================= */
+
+header nav ul {
+    list-style: none;
+    margin-top: 25px;
+}
+
+
+header nav li {
+    display: inline-block;
+    margin: 5px 10px;
+}
+
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: color 0.3s ease;
+}
+
+
+header nav a:hover {
+    color: #ffd700;
+}
+
+
+/* ==============================
+   SECTIONS
+================================= */
+
+section {
+    padding: 50px 0;
+}
+
+
+section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #333;
+    text-transform: uppercase;
+}
+
+
+/* ==============================
+   ABOUT
+================================= */
+
+#about article {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+
+#about p {
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+}
+
+
+/* ==============================
+   SEARCH
+================================= */
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+
+.search-box input,
+.search-box select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+
+.search-box input {
+    width: 300px;
+}
+
+
+/* ==============================
+   ATTRACTIONS
+================================= */
+
+.attraction-grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fill,
+        minmax(250px, 1fr)
+    );
+    gap: 25px;
+}
+
+
+.attraction-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.1);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.attraction-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+.attraction-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+
+.card-content {
+    padding: 20px;
+}
+
+
+.card-content h3 {
+    margin-bottom: 10px;
+}
+
+
+.card-content p {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+
+/* ==============================
+   FAVORITE BUTTON
+================================= */
+
+.favorite-btn {
+    border: none;
+    background: #333;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.2s ease;
+}
+
+
+.favorite-btn:hover {
+    background-color: #555;
+}
+
+
+.favorite-btn:active {
+    transform: scale(0.95);
+}
+
+
+.favorite-btn.active {
+    background-color: #c0392b;
+}
+
+
+/* ==============================
+   NO RESULTS
+================================= */
+
+.hidden {
+    display: none;
+}
+
+
+#noResults {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+
+/* ==============================
+   GALLERY
+================================= */
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+
+.gallery-grid figure {
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+
+    box-shadow:
+        0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.gallery-grid img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+
+.gallery-grid figcaption {
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+}
+
+
+/* ==============================
+   EXPERIENCE SAIGON
+================================= */
+
+#experience {
+    background-color: #ffffff;
+}
+
+.section-intro {
+    text-align: center;
+    max-width: 700px;
+    margin: -10px auto 30px;
+    color: #666;
+}
+
+
+.experience-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fill, minmax(250px, 1fr));
+
+    gap: 25px;
+}
+
+
+.experience-card {
+    background-color: #f8f8f8;
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.experience-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+.experience-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+
+.experience-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+
+.experience-card p {
+    color: #555;
+}
+
+
+/* ==============================
+   FOOD SEARCH
+================================= */
+
+.food-search-box {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.food-search-box input,
+.food-search-box select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.food-search-box input {
+    width: 300px;
+}
+
+
+/* ==============================
+   FOOD GRID
+================================= */
+
+.food-grid {
+    display: grid;
+
+    grid-template-columns: repeat(
+        auto-fill,
+        minmax(250px, 1fr)
+    );
+
+    gap: 25px;
+}
+
+
+.food-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.1);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.food-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+.food-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+
+.food-content {
+    padding: 20px;
+}
+
+
+.food-content h3 {
+    margin-bottom: 10px;
+}
+
+
+.food-content p {
+    color: #555;
+}
+
+
+/* ==============================
+   FAVORITES
+================================= */
+
+#favorites {
+    background-color: #f0f5f9;
+}
+
+
+#favoriteMessage {
+    text-align: center;
+}
+
+
+#favoriteList {
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+
+#favoriteList li {
+    background: white;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border-radius: 5px;
+}
+
+
+/* ==============================
+   LOCATION
+================================= */
+
+#location {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 60px 0;
+}
+
+
+#location h2 {
+    color: white;
+}
+
+
+#location address {
+    font-style: normal;
+    margin-bottom: 15px;
+}
+
+
+/* ==============================
+   FOOTER
+================================= */
+
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+/* ==============================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 50px 0;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header nav li {
+        display: block;
+        margin: 8px 0;
+    }
+
+    .search-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-box input {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .search-box select {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .schedule li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+}
+
+/* ==============================
+   SAIGON EXPERIENCE
+================================= */
+
+#experience {
+    background-color: #ffffff;
+}
+
+.section-intro {
+    text-align: center;
+    max-width: 700px;
+    margin: -10px auto 30px;
+    color: #666;
+}
+
+
+/* Experience Filters */
+
+.experience-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    margin-bottom: 35px;
+}
+
+.experience-filter {
+    border: 1px solid #333;
+
+    background-color: white;
+    color: #333;
+
+    padding: 10px 18px;
+
+    border-radius: 25px;
+
+    cursor: pointer;
+
+    font-size: 0.95rem;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.2s ease;
+}
+
+.experience-filter:hover {
+    transform: translateY(-2px);
+}
+
+.experience-filter.active {
+    background-color: #333;
+    color: white;
+}
+
+
+/* ==============================
+   BUILD YOUR SAIGON
+================================= */
+
+#build-saigon {
+    background-color: #f0f5f9;
+}
+
+#build-saigon .section-intro {
+    max-width: 700px;
+    margin: -10px auto 35px;
+    text-align: center;
+    color: #666;
+}
+
+
+/* Vibe Grid */
+
+.vibe-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(180px, 1fr));
+
+    gap: 18px;
+}
+
+
+.vibe-card {
+    position: relative;
+    border: 1px solid #e0e0e0;
+    background: #ffffff;
+    padding: 30px 20px;
+    border-radius: 16px;
+    cursor: pointer;
+    text-align: left;
+
+    min-height: 190px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.vibe-card::after {
+    content: "→";
+
+    position: absolute;
+    right: 20px;
+    bottom: 18px;
+
+    font-size: 20px;
+    color: #999;
+
+    transition: transform 0.3s ease;
+}
+
+.vibe-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #222;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.vibe-card:hover::after {
+    transform: translateX(5px);
+    color: #222;
+}
+
+.vibe-card.selected {
+    transform: translateY(-8px);
+
+    border-color: #222;
+
+    box-shadow:
+        0 0 0 2px #222,
+        0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.vibe-icon {
+    display: block;
+
+    font-size: 2.2rem;
+
+    margin-bottom: 25px;
+}
+
+.vibe-card strong {
+    display: block;
+
+    font-size: 1.15rem;
+
+    margin-bottom: 8px;
+
+    color: #222;
+}
+
+.vibe-card small {
+    display: block;
+
+    color: #777;
+
+    line-height: 1.5;
+
+    max-width: 180px;
+}
+
+
+/* Result */
+
+.saigon-result {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    max-width: 850px;
+
+    margin: 40px auto 0;
+
+    padding: 30px;
+
+    background-color: #333;
+
+    color: white;
+
+    border-radius: 15px;
+
+    animation: resultAppear 0.4s ease;
+}
+
+
+.result-icon {
+    font-size: 4rem;
+
+    min-width: 80px;
+
+    text-align: center;
+}
+
+
+.result-label {
+    font-size: 0.75rem;
+
+    letter-spacing: 2px;
+
+    opacity: 0.7;
+
+    margin-bottom: 5px;
+}
+
+
+.saigon-result h3 {
+    font-size: 1.8rem;
+
+    margin-bottom: 8px;
+}
+
+
+.saigon-result p {
+    color: #ddd;
+}
+
+
+/* Recommended Places */
+
+.result-places {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 15px;
+}
+
+
+.result-place {
+    background-color: rgba(255, 255, 255, 0.12);
+
+    padding: 7px 12px;
+
+    border-radius: 20px;
+
+    font-size: 0.85rem;
+}
+
+
+/* Animation */
+
+@keyframes resultAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .saigon-result {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .result-places {
+        justify-content: center;
+    }
+
+}
+
+/* =================================
+   SAIGON NIGHT MODE
+================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body.dark-mode {
+    background: #0f1115;
+    color: #f5f5f5;
+}
+
+/* ================================
+   SECTIONS
+================================ */
+
+body.dark-mode section {
+    background: #0f1115;
+    color: #f5f5f5;
+}
+
+body.dark-mode #about,
+body.dark-mode #attractions,
+body.dark-mode #gallery,
+body.dark-mode #food {
+    background: #0f1115;
+}
+
+body.dark-mode #build-saigon {
+    background: #14171d;
+}
+
+/* ================================
+   HEADINGS
+================================ */
+
+body.dark-mode section h2 {
+    color: #ffffff;
+}
+
+body.dark-mode .section-intro {
+    color: #aeb4bf;
+}
+
+/* ================================
+   ATTRACTION CARDS
+================================ */
+
+body.dark-mode .attraction-card,
+body.dark-mode .food-card {
+    background: #191c22;
+    color: #ffffff;
+
+    border: 1px solid #292d35;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+body.dark-mode .attraction-card:hover,
+body.dark-mode .food-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #d6ad60;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .card-content h3,
+body.dark-mode .food-content h3 {
+    color: #ffffff;
+}
+
+body.dark-mode .card-content p,
+body.dark-mode .food-content p {
+    color: #aeb4bf;
+}
+
+/* ================================
+   GALLERY
+================================ */
+
+body.dark-mode .gallery-grid figure {
+    background: #191c22;
+
+    border: 1px solid #292d35;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .gallery-grid figcaption {
+    color: #ffffff;
+}
+
+/* ================================
+   BUILD YOUR SAIGON
+================================ */
+
+body.dark-mode #build-saigon {
+    background:
+        radial-gradient(
+            circle at top,
+            #20252e 0%,
+            #14171d 45%,
+            #101216 100%
+        );
+}
+
+body.dark-mode #build-saigon h2 {
+    color: #ffffff;
+}
+
+/* ================================
+   VIBE CARDS
+================================ */
+
+body.dark-mode .vibe-card {
+    background: #1b1e25;
+    color: #ffffff;
+
+    border: 1px solid #2c3039;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+body.dark-mode .vibe-card:hover {
+    background: #22262f;
+
+    border-color: #d6ad60;
+
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.35);
+}
+
+body.dark-mode .vibe-card strong {
+    color: #ffffff;
+}
+
+body.dark-mode .vibe-card small {
+    color: #aeb4bf;
+}
+
+/* Selected vibe */
+
+body.dark-mode .vibe-card.selected {
+    background: #22262f;
+
+    border: 1px solid #d6ad60;
+
+    box-shadow:
+        0 0 0 1px #d6ad60,
+        0 12px 30px rgba(0, 0, 0, 0.35);
+
+    transform: translateY(-6px);
+}
+
+/* ================================
+   RESULT CARD
+================================ */
+
+body.dark-mode .saigon-result {
+    background:
+        linear-gradient(
+            135deg,
+            #242830,
+            #191c22
+        );
+
+    border: 1px solid #343943;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .result-label {
+    color: #d6ad60;
+}
+
+body.dark-mode .saigon-result h3 {
+    color: #ffffff;
+}
+
+body.dark-mode .saigon-result p {
+    color: #c5c9d0;
+}
+
+body.dark-mode .result-place {
+    background: #30343d;
+    color: #ffffff;
+
+    border: 1px solid #3b404a;
+}
+
+/* ================================
+   SEARCH
+================================ */
+
+body.dark-mode .search-box input,
+body.dark-mode .search-box select,
+body.dark-mode .food-search-box input,
+body.dark-mode .food-search-box select {
+    background: #191c22;
+    color: #ffffff;
+
+    border: 1px solid #343943;
+}
+
+body.dark-mode input::placeholder {
+    color: #7f8692;
+}
+
+body.dark-mode .search-box input:focus,
+body.dark-mode .search-box select:focus,
+body.dark-mode .food-search-box input:focus,
+body.dark-mode .food-search-box select:focus {
+    outline: none;
+
+    border-color: #d6ad60;
+
+    box-shadow:
+        0 0 0 3px rgba(214, 173, 96, 0.12);
+}
+
+/* ================================
+   FAVORITES
+================================ */
+
+body.dark-mode #favorites {
+    background: #14171d;
+}
+
+body.dark-mode #favoriteList li {
+    background: #1b1e25;
+    color: #ffffff;
+
+    border: 1px solid #292d35;
+}
+
+/* ================================
+   LOCATION
+================================ */
+
+body.dark-mode #location {
+    background:
+        linear-gradient(
+            rgba(10, 12, 15, 0.94),
+            rgba(10, 12, 15, 0.98)
+        );
+}
+
+/* ================================
+   DARK MODE BUTTON
+================================ */
+
+.dark-mode-btn {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+
+    background: rgba(255, 255, 255, 0.08);
+
+    color: #ffffff;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    margin-left: 15px;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.dark-mode-btn:hover {
+    transform: rotate(15deg) scale(1.08);
+
+    background: rgba(214, 173, 96, 0.15);
+
+    border-color: #d6ad60;
+}
+
+/* ==========================================
+   BUILD YOUR SAIGON - NEW DESIGN
+========================================== */
+
+#build-saigon {
+    padding: 100px 0;
+    background: #f4f7fa;
+}
+
+#build-saigon .section-intro {
+    max-width: 650px;
+    margin: 0 auto 45px;
+    text-align: center;
+    color: #666;
+}
+
+
+/* VIBE CARDS */
+
+.vibe-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px;
+    margin-bottom: 45px;
+}
+
+.vibe-card {
+    position: relative;
+
+    min-height: 170px;
+
+    padding: 25px 18px;
+
+    border: 2px solid transparent;
+    border-radius: 18px;
+
+    background: white;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    transition:
+        transform 0.25s,
+        box-shadow 0.25s,
+        border 0.25s;
+}
+
+.vibe-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.vibe-card.selected {
+    border-color: #222;
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.12);
+
+    transform: translateY(-5px);
+}
+
+.vibe-icon {
+    display: block;
+
+    font-size: 35px;
+
+    margin-bottom: 18px;
+}
+
+.vibe-card strong {
+    display: block;
+
+    font-size: 18px;
+
+    margin-bottom: 8px;
+}
+
+.vibe-card small {
+    display: block;
+
+    color: #777;
+
+    line-height: 1.5;
+}
+
+
+/* CHOICES */
+
+.choice-section {
+    text-align: center;
+
+    margin: 30px 0;
+}
+
+.choice-section h3 {
+    margin-bottom: 15px;
+
+    font-size: 20px;
+}
+
+.choice-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+}
+
+.budget-option,
+.time-option {
+    padding: 11px 20px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 30px;
+
+    background: white;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.budget-option:hover,
+.time-option:hover {
+    transform: translateY(-2px);
+}
+
+.budget-option.selected,
+.time-option.selected {
+    background: #222;
+
+    color: white;
+
+    border-color: #222;
+}
+
+
+/* ACTION BUTTONS */
+
+.build-actions {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-top: 35px;
+}
+
+.build-button,
+.surprise-button {
+    padding: 14px 25px;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+.build-button {
+    border: none;
+
+    background: #222;
+
+    color: white;
+}
+
+.build-button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.surprise-button {
+    border: 1px solid #ddd;
+
+    background: white;
+
+    color: #333;
+}
+
+.surprise-button:hover {
+    background: #f1f1f1;
+}
+
+
+/* STORY */
+
+.saigon-story {
+    max-width: 900px;
+
+    margin: 70px auto 0;
+
+    padding: 45px;
+
+    border-radius: 25px;
+
+    background: #222;
+
+    color: white;
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.2);
+}
+
+.saigon-story.hidden {
+    display: none;
+}
+
+
+.story-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    margin-bottom: 40px;
+}
+
+.result-icon {
+    font-size: 55px;
+}
+
+.result-label {
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    color: #aaa;
+
+    margin-bottom: 8px;
+}
+
+#resultTitle {
+    font-size: 32px;
+
+    margin-bottom: 10px;
+}
+
+#resultDescription {
+    color: #ccc;
+
+    font-size: 16px;
+}
+
+
+/* ROUTE */
+
+.story-route {
+    margin: 30px 0;
+}
+
+.story-stop {
+    display: grid;
+
+    grid-template-columns: 90px 25px 1fr;
+
+    gap: 15px;
+
+    min-height: 85px;
+}
+
+.stop-time {
+    font-weight: bold;
+
+    color: #f0c674;
+}
+
+.stop-line {
+    position: relative;
+}
+
+.stop-line::before {
+    content: "";
+
+    position: absolute;
+
+    top: 7px;
+    left: 7px;
+
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+
+    background: #f0c674;
+}
+
+.stop-line::after {
+    content: "";
+
+    position: absolute;
+
+    top: 20px;
+    left: 11px;
+
+    width: 2px;
+    height: 65px;
+
+    background: #555;
+}
+
+.story-stop:last-child .stop-line::after {
+    display: none;
+}
+
+.stop-content h4 {
+    font-size: 18px;
+
+    margin-bottom: 5px;
+}
+
+.stop-content p {
+    color: #aaa;
+
+    line-height: 1.5;
+}
+
+
+/* SCORE */
+
+.saigon-score {
+    margin-top: 40px;
+
+    padding-top: 30px;
+
+    border-top: 1px solid #444;
+}
+
+.saigon-score h4 {
+    margin-bottom: 20px;
+
+    font-size: 18px;
+}
+
+.score-item {
+    display: grid;
+
+    grid-template-columns: 150px 1fr;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin: 12px 0;
+}
+
+.score-bar {
+    height: 8px;
+
+    border-radius: 10px;
+
+    background: #444;
+
+    overflow: hidden;
+}
+
+.score-bar span {
+    display: block;
+
+    height: 100%;
+
+    width: 0;
+
+    border-radius: 10px;
+
+    background: #f0c674;
+
+    transition: width 0.8s ease;
+}
+
+
+/* FOOTER */
+
+.story-footer {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 35px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #444;
+}
+
+.story-footer span {
+    padding: 8px 14px;
+
+    border-radius: 20px;
+
+    background: #333;
+
+    color: #ddd;
+}
+
+#resetExperience {
+    margin-left: auto;
+
+    padding: 9px 15px;
+
+    border: none;
+
+    border-radius: 20px;
+
+    background: #444;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+    .vibe-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .vibe-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .build-actions {
+        flex-direction: column;
+    }
+
+    .story-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .saigon-story {
+        padding: 30px 20px;
+    }
+
+    .story-stop {
+        grid-template-columns: 70px 20px 1fr;
+    }
+
+    .score-item {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+    .story-footer {
+        flex-wrap: wrap;
+    }
+
+    #resetExperience {
+        margin-left: 0;
+        width: 100%;
+    }
+
+}
+
+
+#email-itinerary {
+    max-width: 870px;
+    margin: 25px auto;
+    padding: 28px 32px;
+    background: white;
+    border: 1px solid #e5e5e5;
+    border-radius: 18px;
+    box-sizing: border-box;
+}
+
+#email-itinerary h3 {
+    margin: 0 0 8px;
+    font-size: 22px;
+}
+
+#email-itinerary p {
+    color: #777;
+}
+
+#customerEmail {
+    width: 60%;
+    padding: 13px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+#sendItinerary {
+    padding: 13px 20px;
+    margin-left: 8px;
+    border: none;
+    border-radius: 10px;
+    background: #222;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
